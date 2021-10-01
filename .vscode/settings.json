@@ -13,5 +13,8 @@
             "username": "root",
             "password": ""
         }
-    ]
+    ],
+    "files.associations": {
+        "stdlib.h": "c"
+    }
 }
