@@ -26,7 +26,7 @@ int sort(int *v, int n) {
 void main() {
     setlocale(LC_ALL, "Portuguese");
 
-    int v[] = {3, 5, 1, 2, 4};
+    int v[] = {4, -2, 1, 5, 7, 1, 10, 6, 3, -9};
 
     sort(v, sizeof(v)/4);
 

@@ -1,20 +1,5 @@
 {
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3312,
-            "driver": "MySQL",
-            "name": "mysqlxampp",
-            "database": "beto",
-            "username": "root",
-            "password": ""
-        }
-    ],
     "files.associations": {
-        "stdlib.h": "c"
+        "ex02-sort_mario_ptr": "c"
     }
 }
