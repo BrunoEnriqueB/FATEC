@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "cadastro_adsma2": {
+      "commandName": "Project",
+      "sqlDebugging": false
+    }
+  }
+}

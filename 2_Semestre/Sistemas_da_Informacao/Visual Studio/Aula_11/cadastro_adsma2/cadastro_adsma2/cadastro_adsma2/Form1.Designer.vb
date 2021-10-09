@@ -115,6 +115,7 @@ Partial Class Form1
         'btn_excluir
         '
         Me.btn_excluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btn_excluir.Enabled = False
         Me.btn_excluir.Image = CType(resources.GetObject("btn_excluir.Image"), System.Drawing.Image)
         Me.btn_excluir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btn_excluir.Name = "btn_excluir"

@@ -3,7 +3,7 @@
 Module Module1
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
-    Public sql As String
+    Public sql, resp As String
 
     Sub conectar_banco()
         Try
