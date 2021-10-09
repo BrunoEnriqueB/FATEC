@@ -53,6 +53,7 @@ Public Class Form1
                 sql = "update tb_clientes set nome='" & txt_nome.Text & "', email='" & txt_nome.Text & "' where cpf='" & txt_cpf.Text & "'"
                 rs = db.Execute(sql)
                 MsgBox("Dados alterados com sucesso!", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "AVISO")
+                limpar_cadastro()
             Else
                 sql = "insert into tb_clientes values ('" & txt_cpf.Text & "','" & txt_nome.Text & "','" & txt_email.Text & "')"
                 rs = db.Execute(UCase(sql))
