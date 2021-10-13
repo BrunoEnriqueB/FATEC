@@ -18,8 +18,8 @@ void main() {
     int p[] = {2, 5, 7, 9, 8, 12};
 
     if(prefixo(v, v + 4, p, v + 6) == true) {
-        printf("Ã‰ prefixo!");
+        printf("É prefixo!");
     } else {
-        printf("NÃ£o Ã© prefixo!");
+        printf("Não é prefixo!");
     }
 }
