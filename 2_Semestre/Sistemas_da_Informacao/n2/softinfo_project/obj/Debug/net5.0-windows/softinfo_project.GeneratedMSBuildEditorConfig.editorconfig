@@ -6,5 +6,5 @@ build_property.ProjectTypeGuids =
 build_property.PublishSingleFile = 
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
-build_property.RootNamespace = proj_adsma2
-build_property.ProjectDir = C:\Users\bruno\Documentos\fatec\2_Semestre\Sistemas_da_Informacao\VisualStudio\Aula_12\proj_adsma2\
+build_property.RootNamespace = softinfo_project
+build_property.ProjectDir = C:\Users\bruno\Documentos\fatec\2_Semestre\Sistemas_da_Informacao\n2\softinfo_project\

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bruno\\Documentos\\fatec\\2_Semestre\\Sistemas_da_Informacao\\Visual Studio\\Aula_12\\proj_adsma2\\proj_adsma2.vbproj",
+      "projectUniqueName": "C:\\Users\\bruno\\Documentos\\fatec\\2_Semestre\\Sistemas_da_Informacao\\VisualStudio\\Aula_12\\proj_adsma2\\proj_adsma2.vbproj",
       "projectName": "proj_adsma2",
-      "projectPath": "C:\\Users\\bruno\\Documentos\\fatec\\2_Semestre\\Sistemas_da_Informacao\\Visual Studio\\Aula_12\\proj_adsma2\\proj_adsma2.vbproj",
+      "projectPath": "C:\\Users\\bruno\\Documentos\\fatec\\2_Semestre\\Sistemas_da_Informacao\\VisualStudio\\Aula_12\\proj_adsma2\\proj_adsma2.vbproj",
       "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bruno\\Documentos\\fatec\\2_Semestre\\Sistemas_da_Informacao\\Visual Studio\\Aula_12\\proj_adsma2\\obj\\",
+      "outputPath": "C:\\Users\\bruno\\Documentos\\fatec\\2_Semestre\\Sistemas_da_Informacao\\VisualStudio\\Aula_12\\proj_adsma2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
