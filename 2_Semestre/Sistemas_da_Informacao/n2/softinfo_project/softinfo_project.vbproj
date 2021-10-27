@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="FontAwesome.Sharp" Version="5.15.3" />
+    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.2.4" />
   </ItemGroup>
 
   <ItemGroup>

@@ -13,6 +13,15 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App"
         ]
+      },
+      "Guna.UI2.WinForms/2.0.2.4": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Guna.UI2.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Guna.UI2.dll": {}
+        }
       }
     }
   },
@@ -32,11 +41,26 @@
         "lib/net48/FontAwesome.Sharp.dll",
         "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
       ]
+    },
+    "Guna.UI2.WinForms/2.0.2.4": {
+      "sha512": "UE3F7YcMAHl6318Mds9iHt91C/bWmsDAoTgAXl2g4gxOIaiZHPC+eqgtzvBmEcj6sHSx4T3SDUJijbj7pFpM0Q==",
+      "type": "package",
+      "path": "guna.ui2.winforms/2.0.2.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "guna.ui2.winforms.2.0.2.4.nupkg.sha512",
+        "guna.ui2.winforms.nuspec",
+        "icon.png",
+        "lib/net40/Guna.UI2.dll"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
-      "FontAwesome.Sharp >= 5.15.3"
+      "FontAwesome.Sharp >= 5.15.3",
+      "Guna.UI2.WinForms >= 2.0.2.4"
     ]
   },
   "packageFolders": {
@@ -81,6 +105,10 @@
           "FontAwesome.Sharp": {
             "target": "Package",
             "version": "[5.15.3, )"
+          },
+          "Guna.UI2.WinForms": {
+            "target": "Package",
+            "version": "[2.0.2.4, )"
           }
         },
         "imports": [
@@ -104,5 +132,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Guna.UI2.WinForms 2.0.2.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Guna.UI2.WinForms",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    }
+  ]
 }

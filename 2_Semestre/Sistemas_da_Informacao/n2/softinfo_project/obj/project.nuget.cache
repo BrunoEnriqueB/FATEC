@@ -1,10 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "TQPcgxFdSNpbcFGRGp0I4fBCw6x+jpaPdLAC6oKmsxBBDfzEZL1W+d1BDiCdqZprBR+QzPyz+Y44/UuLlmqfhg==",
+  "dgSpecHash": "0ZUHJyQSvr/kDdZTafi3HbbASfU336ACTkCO/feDIZkTVd++pq8SL12qZGiKS2G8Xgi9k15H1HtbpfL/XMqDyA==",
   "success": true,
   "projectFilePath": "C:\\Users\\bruno\\Documentos\\fatec\\2_Semestre\\Sistemas_da_Informacao\\n2\\softinfo_project\\softinfo_project.vbproj",
   "expectedPackageFiles": [
-    "C:\\Users\\bruno\\.nuget\\packages\\fontawesome.sharp\\5.15.3\\fontawesome.sharp.5.15.3.nupkg.sha512"
+    "C:\\Users\\bruno\\.nuget\\packages\\fontawesome.sharp\\5.15.3\\fontawesome.sharp.5.15.3.nupkg.sha512",
+    "C:\\Users\\bruno\\.nuget\\packages\\guna.ui2.winforms\\2.0.2.4\\guna.ui2.winforms.2.0.2.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Guna.UI2.WinForms 2.0.2.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Guna.UI2.WinForms",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    }
+  ]
 }
