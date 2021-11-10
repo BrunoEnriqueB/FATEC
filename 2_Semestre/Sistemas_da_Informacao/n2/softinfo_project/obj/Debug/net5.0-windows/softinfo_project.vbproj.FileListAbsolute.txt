@@ -19,3 +19,5 @@ C:\Users\bruno\Documentos\fatec\2_Semestre\Sistemas_da_Informacao\n2\softinfo_pr
 C:\Users\bruno\Documentos\fatec\2_Semestre\Sistemas_da_Informacao\n2\softinfo_project\obj\Debug\net5.0-windows\softinfo_project.genruntimeconfig.cache
 C:\Users\bruno\Documentos\fatec\2_Semestre\Sistemas_da_Informacao\n2\softinfo_project\obj\Debug\net5.0-windows\softinfo_project.frm_login.resources
 C:\Users\bruno\Documentos\fatec\2_Semestre\Sistemas_da_Informacao\n2\softinfo_project\obj\Debug\net5.0-windows\softinfo_project.frm_registro.resources
+C:\Users\bruno\Documentos\fatec\2_Semestre\Sistemas_da_Informacao\n2\softinfo_project\bin\Debug\net5.0-windows\Guna.UI2.dll
+C:\Users\bruno\Documentos\fatec\2_Semestre\Sistemas_da_Informacao\n2\softinfo_project\obj\Debug\net5.0-windows\softinfo_project.vbproj.CopyComplete

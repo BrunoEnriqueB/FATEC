@@ -17,4 +17,8 @@
     Private Sub CalculadoraToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles CalculadoraToolStripMenuItem2.Click
         Shell("calc.exe")
     End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

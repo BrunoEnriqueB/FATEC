@@ -38,3 +38,5 @@ C:\Users\bruno\Documentos\fatec\2_Semestre\Sistemas_da_Informacao\VisualStudio\A
 C:\Users\bruno\Documentos\fatec\2_Semestre\Sistemas_da_Informacao\VisualStudio\Aula_12\proj_adsma2\obj\Debug\net5.0-windows\ref\proj_adsma2.dll
 C:\Users\bruno\Documentos\fatec\2_Semestre\Sistemas_da_Informacao\VisualStudio\Aula_12\proj_adsma2\obj\Debug\net5.0-windows\proj_adsma2.pdb
 C:\Users\bruno\Documentos\fatec\2_Semestre\Sistemas_da_Informacao\VisualStudio\Aula_12\proj_adsma2\obj\Debug\net5.0-windows\proj_adsma2.genruntimeconfig.cache
+C:\Users\bruno\Documentos\fatec\2_Semestre\Sistemas_da_Informacao\VisualStudio\Aula_12\proj_adsma2\obj\Debug\net5.0-windows\Interop.ADODB.dll
+C:\Users\bruno\Documentos\fatec\2_Semestre\Sistemas_da_Informacao\VisualStudio\Aula_12\proj_adsma2\obj\Debug\net5.0-windows\proj_adsma2.vbproj.ResolveComReference.cache

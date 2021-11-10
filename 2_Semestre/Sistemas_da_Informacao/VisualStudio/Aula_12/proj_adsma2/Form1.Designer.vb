@@ -61,14 +61,14 @@ Partial Class Form1
         Me.ClientesToolStripMenuItem.Image = CType(resources.GetObject("ClientesToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
         Me.ClientesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'FuncionáriosToolStripMenuItem
         '
         Me.FuncionáriosToolStripMenuItem.Name = "FuncionáriosToolStripMenuItem"
         Me.FuncionáriosToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2
-        Me.FuncionáriosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FuncionáriosToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.FuncionáriosToolStripMenuItem.Text = "Funcionários"
         '
         'APLICATIVOSToolStripMenuItem
@@ -133,7 +133,7 @@ Partial Class Form1
         'SairDoSistemaToolStripMenuItem
         '
         Me.SairDoSistemaToolStripMenuItem.Name = "SairDoSistemaToolStripMenuItem"
-        Me.SairDoSistemaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SairDoSistemaToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.SairDoSistemaToolStripMenuItem.Text = "Sair do sistema"
         '
         'Form1
@@ -144,8 +144,8 @@ Partial Class Form1
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Menu Principal"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)

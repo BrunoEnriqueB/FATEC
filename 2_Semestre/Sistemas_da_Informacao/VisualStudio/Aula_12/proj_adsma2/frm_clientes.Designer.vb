@@ -51,12 +51,17 @@ Partial Class frm_clientes
         Me.txt_cpf = New System.Windows.Forms.MaskedTextBox()
         Me.img_foto = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgv_dados = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btn_gravar = New System.Windows.Forms.ToolStripButton()
         Me.btn_excluir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
+        Me.txt_busca = New System.Windows.Forms.ToolStripTextBox()
         Me.btn_search = New System.Windows.Forms.ToolStripButton()
         Me.btn_editar = New System.Windows.Forms.ToolStripButton()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
@@ -64,7 +69,7 @@ Partial Class frm_clientes
         Me.TabPage1.SuspendLayout()
         CType(Me.img_foto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_dados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -336,7 +341,7 @@ Partial Class frm_clientes
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
+        Me.TabPage2.Controls.Add(Me.dgv_dados)
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -345,18 +350,60 @@ Partial Class frm_clientes
         Me.TabPage2.Text = "LISTAGEM DE CLIENTES"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgv_dados
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(21, 21)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(574, 320)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgv_dados.AllowUserToAddRows = False
+        Me.dgv_dados.AllowUserToDeleteRows = False
+        Me.dgv_dados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgv_dados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_dados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
+        Me.dgv_dados.Location = New System.Drawing.Point(21, 21)
+        Me.dgv_dados.Name = "dgv_dados"
+        Me.dgv_dados.ReadOnly = True
+        Me.dgv_dados.RowTemplate.Height = 25
+        Me.dgv_dados.Size = New System.Drawing.Size(574, 320)
+        Me.dgv_dados.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Nº"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 46
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "CPF"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 53
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Nome"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 65
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Buscar"
+        Me.Column4.Image = CType(resources.GetObject("Column4.Image"), System.Drawing.Image)
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 48
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Excluir"
+        Me.Column5.Image = CType(resources.GetObject("Column5.Image"), System.Drawing.Image)
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 48
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_gravar, Me.btn_excluir, Me.ToolStripLabel1, Me.ToolStripTextBox1, Me.btn_search, Me.btn_editar})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_gravar, Me.btn_excluir, Me.ToolStripLabel1, Me.txt_busca, Me.btn_search, Me.btn_editar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(656, 25)
@@ -389,10 +436,10 @@ Partial Class frm_clientes
         Me.ToolStripLabel1.Size = New System.Drawing.Size(167, 22)
         Me.ToolStripLabel1.Text = "Digite um parâmetro de busca"
         '
-        'ToolStripTextBox1
+        'txt_busca
         '
-        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
-        Me.ToolStripTextBox1.Size = New System.Drawing.Size(100, 25)
+        Me.txt_busca.Name = "txt_busca"
+        Me.txt_busca.Size = New System.Drawing.Size(100, 25)
         '
         'btn_search
         '
@@ -433,7 +480,7 @@ Partial Class frm_clientes
         Me.TabPage1.PerformLayout()
         CType(Me.img_foto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_dados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -469,13 +516,18 @@ Partial Class frm_clientes
     Friend WithEvents Label9 As Label
     Friend WithEvents txt_cidade As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgv_dados As DataGridView
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents btn_gravar As ToolStripButton
     Friend WithEvents btn_excluir As ToolStripButton
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
-    Friend WithEvents ToolStripTextBox1 As ToolStripTextBox
+    Friend WithEvents txt_busca As ToolStripTextBox
     Friend WithEvents btn_search As ToolStripButton
     Friend WithEvents btn_editar As ToolStripButton
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewImageColumn
+    Friend WithEvents Column5 As DataGridViewImageColumn
 End Class
