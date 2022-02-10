@@ -133,4 +133,8 @@
             MsgBox("Erro ao processar!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso")
         End Try
     End Sub
+
+    Private Sub txt_cep_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles txt_cep.MaskInputRejected
+
+    End Sub
 End Class
