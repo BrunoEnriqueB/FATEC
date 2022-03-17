@@ -46,6 +46,19 @@ float ultimo_elemento(Pilha *pilha) {
   return topo;
 }
 
+int conta_elementos(Pilha *pilha) {
+  Pilha *pilha_reserva = pilha_cria();
+  int cont = 0;
+  while(!pilha_vazia(pilha)) {
+    pilha_push(pilha_reserva, pilha_pop(pilha));
+    cont++;
+  }
+  while(!pilha_vazia(pilha_reserva)) {
+    pilha_push(pilha, pilha_pop(pilha_reserva));
+  }
+  return cont;
+}
+
 void menu()
 {
    printf("Escolha uma das opcoes do menu\n");
@@ -55,6 +68,7 @@ void menu()
    printf("4. Soma dos elementos \n");
    printf("5. Mostrar primeiro elemento\n");
    printf("6. Mostrar ultimo elemento\n");
+   printf("7. Conta os elementos\n");
    printf("0. End\n");
 }
 
@@ -76,7 +90,7 @@ void main() {
         pilha_push(pilha, value);
         break;
       case 2:
-        pilha_vazia(pilha) ? printf("Pilha vazia!") : printf("Item removido: %f\n", pilha_pop(pilha));
+        pilha_vazia(pilha) ? printf("Pilha vazia!\n") : printf("Item removido: %f\n", pilha_pop(pilha));
         break;
       case 3:
         pilha_mostra(pilha);
@@ -88,8 +102,11 @@ void main() {
         printf("Primeiro elemento da pilha: %.0f\n", primeiro_elemento(pilha));
         break;
       case 6:
-      printf("Ultimo elemento da pilha: %.0f\n", ultimo_elemento(pilha));
-      break;
+        printf("Ultimo elemento da pilha: %.0f\n", ultimo_elemento(pilha));
+        break;
+      case 7:
+        printf("Quantidade de elementos da pilha: %d\n", conta_elementos(pilha));
+        break;
       case 0:
         break;
       default:
