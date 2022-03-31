@@ -33,10 +33,21 @@ void ocorrencias(char *p)
     }
     p++;
   }
+  p = inicio;
+  cont = 0;
+  while (*p != '\0')
+  {
+    if (*p != '-')
+    {
+      printf("A letra %c apareceu %d vezes\n", *p, vetorOcorrencias[cont]);
+      cont++;
+    }
+    p++;
+  }
 }
 
 void main()
 {
-  char palavra[] = "arara";
+  char palavra[] = "joao";
   ocorrencias(palavra);
 }
