@@ -3,23 +3,29 @@
 
 void ocorrencias(char *p)
 {
-  char *inicio = p;
+  char *auxiliar = p;
   int tamanho = 0;
-  while (*p != '\0')
+  while (*auxiliar != '\0')
   {
     tamanho++;
-    p++;
+    auxiliar++;
   }
-  p = inicio;
+  auxiliar = p;
   int vetorOcorrencias[tamanho], cont = 0;
-  while (*p != '\0')
+
+  for (int i = 0; i < tamanho; i++)
   {
-    char letra = *p;
-    for (char *i = p; *i != '\0'; i++)
+    vetorOcorrencias[i] = 0;
+  }
+
+  while (*auxiliar != '\0')
+  {
+    char letra = *auxiliar;
+    for (char *i = auxiliar; *i != '\0'; i++)
     {
-      if (i == p && *i != '-')
+      if (i == auxiliar && *i != '-')
       {
-        vetorOcorrencias[cont]++;
+        vetorOcorrencias[cont] = 1;
       }
       else if (*i == letra && *i != '-')
       {
@@ -31,23 +37,25 @@ void ocorrencias(char *p)
     {
       cont++;
     }
-    p++;
+    auxiliar++;
   }
-  p = inicio;
+  auxiliar = p;
   cont = 0;
-  while (*p != '\0')
+  while (*auxiliar != '\0')
   {
-    if (*p != '-')
+    if (*auxiliar != '-')
     {
-      printf("A letra %c apareceu %d vezes\n", *p, vetorOcorrencias[cont]);
+      printf("A letra %c apareceu %d vezes\n", *auxiliar, vetorOcorrencias[cont]);
       cont++;
     }
-    p++;
+    auxiliar++;
   }
+
+  printf("%s", p);
 }
 
 void main()
 {
-  char palavra[] = "joao";
+  char palavra[] = "caralho essa porra";
   ocorrencias(palavra);
 }
