@@ -4,50 +4,43 @@
 
 Pilha *intercala_pilha(Pilha *p1, Pilha *p2)
 {
-  Pilha *auxiliar1 = pilha_cria();
-  int size1 = 0, size2 = 0;
-  while (!pilha_vazia(p1))
+  Pilha *auxiliar1 = pilha_cria(), *auxiliar2 = pilha_cria(); // cria pilha auxiliar 1 e 2
+  int tamanho1 = 0, tamanho2 = 0;                             // variáveis que terão o tamanho das pilhas 1 e 2
+  while (!pilha_vazia(p1))                                    // pega o tamanho da pilha 1
   {
     pilha_push(auxiliar1, pilha_pop(p1));
-    size1++;
+    tamanho1++;
   }
-  Pilha *auxiliar2 = pilha_cria();
-  while (!pilha_vazia(p2))
+  while (!pilha_vazia(p2)) // pega o tamanho da pilha 2
   {
     pilha_push(auxiliar2, pilha_pop(p2));
-    size2++;
+    tamanho2++;
   }
 
   float valor;
-  Pilha *p3 = pilha_cria();
+  Pilha *p3 = pilha_cria(); // cria a pilha que terá as pilhas intercaladas
 
-  for (int i = 0; i <= size1 + size2; i++)
+  int maior;
+  maior = tamanho1 > tamanho2 ? tamanho1 : tamanho2; // cria variável que vai ter o tamanho da maior pilha
+
+  for (int index = 0; index <= maior; index++) // loop que vai adicionar os valores da pilha intercalada
   {
-    if (i < size1 && i < size2)
+    if (index < tamanho1) // verifica se o index for menor que o tamanho da pilha 1
     {
-      valor = pilha_pop(auxiliar1);
-      pilha_push(p3, valor);
-      pilha_push(p1, valor);
-      valor = pilha_pop(auxiliar2);
-      pilha_push(p3, valor);
-      pilha_push(p2, valor);
+      valor = pilha_pop(auxiliar1); // se for, pega o valor da auxiliar 1
+      pilha_push(p3, valor);        // adiciona na pilha nova
+      pilha_push(p1, valor);        // adiciona na respectiva pilha antiga
     }
-    else if (i <= size1 && i > size2)
+    if (index < tamanho2) // verifica se o index for menor que o tamanho da pilha 2
     {
-      valor = pilha_pop(auxiliar1);
-      pilha_push(p3, valor);
-      pilha_push(p1, valor);
-    }
-    else if (i > size1 && i <= size2)
-    {
-      valor = pilha_pop(auxiliar2);
-      pilha_push(p3, valor);
-      pilha_push(p2, valor);
+      valor = pilha_pop(auxiliar2); // se for, pega o valor da auxiliar 2
+      pilha_push(p3, valor);        // adiciona na pilha nova
+      pilha_push(p2, valor);        // adiciona na respectiva pilha antiga
     }
   }
-  pilha_libera(auxiliar1);
-  pilha_libera(auxiliar2);
-  return p3;
+  pilha_libera(auxiliar1); // libera auxiliar 1
+  pilha_libera(auxiliar2); // libera auxiliar 2
+  return p3;               // retorna a nova pilha intercalada
 }
 
 void main()
@@ -60,7 +53,7 @@ void main()
     pilha_push(pilha1, i);
   }
 
-  for (int i = 1; i <= 3; i++)
+  for (int i = 1; i <= 6; i++)
   {
     pilha_push(pilha2, i + 10);
   }
