@@ -1,65 +1,65 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "./pilha.h"
+#include "./fila.h"
 
-Pilha *intercala_pilha(Pilha *p1, Pilha *p2)
+Fila *intercala_fila(Fila *f1, Fila *f2)
 {
-  Pilha *auxiliar1 = pilha_cria(), *auxiliar2 = pilha_cria(); // cria pilha auxiliar 1 e 2
-  int tamanho1 = 0, tamanho2 = 0;                             // variáveis que terão o tamanho das pilhas 1 e 2
-  while (!pilha_vazia(p1))                                    // pega o tamanho da pilha 1
-  {
-    pilha_push(auxiliar1, pilha_pop(p1));
+  Fila *auxiliar1 = fila_cria(), *auxiliar2 = fila_cria(); // cria fila auxiliar 1 e 2
+  int tamanho1 = 0, tamanho2 = 0;                          // variáveis que terão o tamanho das filas 1 e 2
+  while (!fila_vazia(f1))
+  { // pega o tamanho da fila 1
+    fila_insere(auxiliar1, fila_retira(f1));
     tamanho1++;
   }
-  while (!pilha_vazia(p2)) // pega o tamanho da pilha 2
-  {
-    pilha_push(auxiliar2, pilha_pop(p2));
+  while (!fila_vazia(f2))
+  { // pega o tamanho da fila 2
+    fila_insere(auxiliar2, fila_retira(f2));
     tamanho2++;
   }
 
   float valor;
-  Pilha *p3 = pilha_cria(); // cria a pilha que terá as pilhas intercaladas
+  Fila *f3 = fila_cria(); // cria a fila que terá as filas intercaladas
 
   int maior;
-  maior = tamanho1 > tamanho2 ? tamanho1 : tamanho2; // cria variável que vai ter o tamanho da maior pilha
+  maior = tamanho1 > tamanho2 ? tamanho1 : tamanho2; // cria variável que vai ter o tamanho da maior fila
 
-  for (int index = 0; index <= maior; index++) // loop que vai adicionar os valores da pilha intercalada
-  {
-    if (index < tamanho1) // verifica se o index for menor que o tamanho da pilha 1
-    {
-      valor = pilha_pop(auxiliar1); // se for, pega o valor da auxiliar 1
-      pilha_push(p3, valor);        // adiciona na pilha nova
-      pilha_push(p1, valor);        // adiciona na respectiva pilha antiga
+  for (int index = 0; index <= maior; index++)
+  { // loop que vai adicionar os valores da fila intercalada
+    if (index < tamanho1)
+    {                                 // verifica se o index for menor que o tamanho da fila 1
+      valor = fila_retira(auxiliar1); // se for, pega o valor da auxiliar 1
+      fila_insere(f3, valor);         // adiciona na fila nova
+      fila_insere(f1, valor);         // adiciona na respectiva fila antiga
     }
-    if (index < tamanho2) // verifica se o index for menor que o tamanho da pilha 2
-    {
-      valor = pilha_pop(auxiliar2); // se for, pega o valor da auxiliar 2
-      pilha_push(p3, valor);        // adiciona na pilha nova
-      pilha_push(p2, valor);        // adiciona na respectiva pilha antiga
+    if (index < tamanho2)
+    {                                 // verifica se o index for menor que o tamanho da fila 2
+      valor = fila_retira(auxiliar2); // se for, pega o valor da auxiliar 2
+      fila_insere(f3, valor);         // adiciona na fila nova
+      fila_insere(f2, valor);         // adiciona na respectiva fila antiga
     }
   }
-  pilha_libera(auxiliar1); // libera auxiliar 1
-  pilha_libera(auxiliar2); // libera auxiliar 2
-  return p3;               // retorna a nova pilha intercalada
+  fila_libera(auxiliar1); // libera auxiliar 1
+  fila_libera(auxiliar2); // libera auxiliar 2
+  return f3;              // retorna a nova fila intercalada
 }
 
 void main()
 {
-  Pilha *pilha1 = pilha_cria();
-  Pilha *pilha2 = pilha_cria();
+  Fila *fila1 = fila_cria();
+  Fila *fila2 = fila_cria();
 
   for (int i = 1; i <= 5; i++)
   {
-    pilha_push(pilha1, i);
+    fila_insere(fila1, i);
   }
 
-  for (int i = 1; i <= 6; i++)
+  for (int i = 1; i <= 4; i++)
   {
-    pilha_push(pilha2, i + 10);
+    fila_insere(fila2, i * 10);
   }
 
-  Pilha *pilhaNova = intercala_pilha(pilha1, pilha2);
-  pilha_mostra(pilha1);
-  pilha_mostra(pilha2);
-  pilha_mostra(pilhaNova);
+  Fila *filaNova = intercala_fila(fila1, fila2);
+  fila_mostra(fila1);
+  fila_mostra(fila2);
+  fila_mostra(filaNova);
 }
