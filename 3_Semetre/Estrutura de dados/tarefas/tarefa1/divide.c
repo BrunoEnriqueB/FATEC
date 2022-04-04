@@ -5,21 +5,21 @@
 Pilha *divide(Pilha *p)
 {
 
-  Pilha *auxiliar = pilha_cria();
-  while (!pilha_vazia(p))
+  Pilha *auxiliar = pilha_cria(); // cria a pilha
+  while (!pilha_vazia(p))         // passa a pilha pra auxiliar
   {
     pilha_push(auxiliar, pilha_pop(p));
   }
-  Pilha *nova_pilha = pilha_cria();
+  Pilha *nova_pilha = pilha_cria(); // pilha que conterá a pilha principal dividida
   float valor;
   while (!pilha_vazia(auxiliar))
   {
-    valor = pilha_pop(auxiliar);
-    pilha_push(p, valor);
-    pilha_push(nova_pilha, valor / 2);
+    valor = pilha_pop(auxiliar);       // pega os valores da pilha auxiliar
+    pilha_push(p, valor);              // adiciona o valor de volta para a pilha principal
+    pilha_push(nova_pilha, valor / 2); // adiciona o valor na nova pilha já dividido
   }
-  free(auxiliar);
-  return nova_pilha;
+  free(auxiliar);    // libera a pilha
+  return nova_pilha; // retorna a pilha dividida
 }
 
 void main()
