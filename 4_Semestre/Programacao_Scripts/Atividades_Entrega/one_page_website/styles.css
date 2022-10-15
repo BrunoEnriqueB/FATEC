@@ -1,0 +1,276 @@
+html{
+	scroll-behavior: smooth;	
+}
+
+body{
+	font-family:Trebuchet MS; 	
+	margin:0;
+}
+
+.vue-js {
+  margin: 12px 0 0 10px;
+  display: flex;
+  align-items: center;
+  float: left;
+}
+
+.vue-js > h1 {
+  margin: 0;
+  float: left;
+  color: #ffffff;
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+.vue-js > img {
+  float: left;
+  width: 30px;
+}
+
+div > .secao{
+	height: 100%;
+	width: 100%;
+}
+
+section > h2{	
+	padding-top: 100px;
+}
+
+p {
+	text-align: justify;
+	padding: 0px 10px;
+  margin: 0;
+}
+
+header{
+	background: #000000;
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0px;
+	left: 0px;	
+}
+
+header > h1{
+	color: #FFE2A8;
+	font-size: 28px;
+}
+
+.menuHamburger {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+}
+
+.hamburguer, .hamburguer::after, .hamburguer::before{
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.hamburguer::before {
+  content: '';
+  margin-top: -10px;
+}
+
+.hamburguer::after {
+  content: '';
+  margin-top: 10px;
+}
+
+nav {
+  float: right;
+  margin-right: 30px;
+}
+
+nav li{
+	padding:5px;
+	display:inline;
+	list-style:none;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 650px) {
+	nav{
+		display:none;
+    float: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+	}
+
+  nav > ul {
+    padding: 0;
+  }
+
+  header {
+    height: 100px;
+  }
+
+	.menuHamburger{
+		display:block;
+	}
+}
+
+main {
+  padding: 0 10%;
+  margin-top: 50px;
+}
+
+section {
+  padding: 30px;
+}
+
+section p {
+  margin: 0;
+  text-align: justify;
+  text-indent: 10px;
+}
+
+section h2 {
+  margin: 0;
+  margin-bottom: 10px
+}
+
+footer {
+  background-color: #34495E;
+}
+
+.section2, .section4 {
+  background-color: #41B883;
+}
+
+.section1 h2, .section3 h2 {
+  margin-left: 40px;
+}
+
+.section2 h2, .section4 h2 {
+  margin-right: 40px;
+  text-align: end;
+}
+
+.section1 p {
+  float: right;
+  width: 63%;
+} 
+
+.section1 p a, .section3 p a {
+  color: #41B883;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.section2 p, .section2 a, .section4 p, .section4 a {
+  color: #ffffff;
+}
+
+.evan-you {
+  width: 25%;
+}
+
+.section1 {
+  min-height: 270px;
+}
+
+.section4 {
+  padding-bottom: 50px;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.images > img {
+  width: 5%;
+}
+
+@media (max-width: 1280px) {
+
+  main {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .images > img  {
+    width: 10%;
+  }
+}
+
+footer {
+  padding: 20px;
+}
+
+footer p, 
+footer a, 
+label {
+  color: #FFFFFF;
+  text-align: center;
+  display: block;
+}
+
+label {
+  margin-top: 20px;
+}
+
+footer a {
+  cursor: pointer;
+}
+
+form input {
+  margin: 0 auto;
+  display: block;
+}
+
+.txtEmail {
+  margin-top: 20px;
+  width: 80%;
+  height: 30px;
+  background-color: #34495E;
+  border: 0;
+  border-bottom: 1px solid #41B883;
+  outline: 0;
+}
+
+.txtEmail::placeholder {
+  color: #41B883;
+}
+
+.txtEmail:focus {
+  color: #FFFFFF;
+}
+
+
+fieldset {
+  width: fit-content;
+  margin: 50px auto;
+  border-color: #41B883 ;
+}
+
+
+legend{
+  color: #FFFFFF;
+}
+
+.submit {
+  width: 150px;
+  height: 40px;
+}

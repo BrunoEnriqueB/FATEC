@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+    <meta charset='utf-8'>
+		<link rel='stylesheet' type='text/css' href='styles.css'>
+		<link rel="icon" type="image/x-icon" href="menu-icon.svg">
+    <link rel="shortcut icon" href="./assets/icons/vue-js-icon.svg" type="image/x-icon">
+		<title>Vue js</title>
+    <script src="index.js"></script>
+	</head>
+	<body>
+		<header>
+      <div class="vue-js">
+        <img src="./assets/icons/vue-js-icon.svg" alt="Vue.js icon">
+        <h1>Vue.js</h1>
+      </div>
+      <div class="menuHamburger">
+        <a class="hamburguer" onclick="toggleMenu()"></a>
+      </div>
+			<nav class="menu">
+				<ul>
+					<li><a href='#section1'>Quem criou?</a></li>
+					<li><a href='#section2'>O que é?</a></li>
+					<li><a href='#section3'>Para que serve?</a></li>
+					<li><a href='#section4'>Quem usa?</a></li>
+				</ul>
+			</nav>
+		</header>
+    <main>
+      <section class='section1'>
+        <a name='section1'><h2>Criação</h2></a>
+        <img class="evan-you" src="./assets/images/evan-you.jfif" alt="Evan you photo">
+        <p>
+          O vue.js foi criado por Evan You, que com 35 anos é um desenvolvedor independente mas que já trabalhou em grandes empresas como a Google. O framework foi criado em 2014 após Evan You se revoltar com o <a href="https://angular.io/" target="_blank">Angular</a>, framework que ele usava durante sua carreira na Google. Você pode acessar a documentação do Vue clicando <a href="https://vuejs.org/" target="_blank">aqui.</a>
+        </p>
+      </section>
+      <section class='section2'>
+        <a name='section2'><h2>O que é?</h2></a>
+        <p>		
+          É um framework JavaScript open source para a criação de aplicações web, criado por Evan You em 2014. O Vue.js possibilita criar aplicações de forma reativa. O Vue.js faz a utilização de um DOM virtual, o que faz com que seja extremamente performático na maioria das situações. Além disso, conta com uma arquitetura muito bem estruturada por meio da criação de componentes reusáveis.
+        </p>
+        <p>
+          Este framework é muito utilizado para criar aplicações SPA (Single Page Applications) e também para desenvolver vários outros tipos de interfaces, com foco na interação e experiência do usuário. Atualmente e não à toa, o Vue.js está entre os frameworks Javascript para criação de interfaces mais populares do mundo, devido à sua baixa curva de aprendizado, sua versatilidade e por oferecer uma solução bem completa – contando até mesmo com uma CLI, o Vue CLI.
+        </p>
+        <p>
+          Além disso, possui uma boa documentação oficial (inclusive em português) e sua comunidade é bem ativa e não para de crescer. Dessa forma, o Vue.js é um dos frameworks prediletos por parte dos desenvolvedores, como podemos ver pelo StackOverflow Insights.
+        </p>
+      </section>
+      <section class='section3'>
+        <a name='section3'><h2>Para que serve?</h2></a>
+        <p>		
+          Com mais de 150k de estrelas no Github, Vue.JS está entre os frameworks Javascript para criação de interfaces mais populares do mundo. Há quem diga que, entre os Desenvolvedores, a aprovação de Vue JS beira os 90%.
+        </p>
+        <p>
+          Com versatilidade, modularização e facilidade de aprendizado, o framework vem se tornando a escolha número 1 entre profissionais da área que procuram  criar websites profissionais e de alto desempenho.
+          Apostando em uma arquitetura enxuta, Vue requer uma configuração mínima na criação de um projeto e pode ser facilmente integrado com uma aplicação já existente através de uma simples tag script. 
+        </p>
+        <p>
+          Essa característica coloca o framework em um lugar de destaque tanto para  desenvolvedores, devido a facilidade de aprendizado e estrutura limpa do projeto, quanto para grandes empresas. 
+          Isso acontece graças à fácil integração de um novo colaborador ao um projeto já em andamento, mesmo sem um conhecimento prévio da ferramenta. 
+        </p>
+      </section>
+      <section class='section4'>
+        <a name='section4'><h2>Quem usa?</h2></a>
+        <div class="pharagraphs">
+          <p>		
+            Se você olhar individualmente para empresas do Silicon Valley, não vai encontrar empresas grandes usando Vue, porque elas naturalmente tendem a usar tecnologias apoiadas por empresas como Facebook e Google. No entanto tem uma presença boa em empresas de desenvolvimento/consultoria, há um projeto feito por terceiros para o Facebook (sim, essa página foi feita com Vue).
+            Se tratando do uso empresarial, o Vue tem uma lista muito mais internacional, incluindo a “big three” chinesa de tecnologia: Alibaba, Baidu e Tencent, e algumas empresas de destaque mais valorizadas no momento, por exemplo Xiaomi, Ele.me e DJI. (Grande parte disso é por que sou muito ativo na comunidade chinesa de JS)
+          </p>
+          <p>
+            No Japão, Vue também é usado por empresas mais conceituadas como Line corp & Nintendo. No Reino Unido a Sainsbury's esta começando a usar Vue.js em larga escala também.
+            Além disso, existem ótimos projetos de código aberto que agora usam Vue.js extensivamente, por exemplo: Laravel, GitLab e PageKit.
+          </p>
+        </div>
+        <div class="images">
+          <img src="./assets/images/alibaba.png" alt="Logo Alibaba">
+          <img src="./assets/images/baidu.png" alt="Logo Baidu">
+          <img src="./assets/images/gitlab.png" alt="Logo Gitlab">
+          <img src="./assets/images/laravel.png" alt="Logo Laravel">
+          <img src="./assets/images/nintendo.png" alt="Logo Nintendo">
+          <img src="./assets/images/sainsbury.png" alt="Logo sainsbury's">
+          <img src="./assets/images/tencent.png" alt="Logo Tencent">
+          <img src="./assets/images/Xiaomi_logo_(2021-).png" alt="Logo Xiaomi">
+        </div>
+        </section>
+    </main>
+		<footer>
+      <p>Deseja conhecer mais sobre o Vue.js? Assine nossa página</p>
+      <fieldset>
+        <legend>Increva-se</legend>
+        <form class="subscribe" onsubmit="subscribe();">
+          <p>
+            Insira seu email abaixo para participar da nossa newsletter e receber informações sobre nossas novidades em primeira mão.
+          </p>
+          <input type='email' name='txtEmail' class='txtEmail' placeholder='meuemail@provedor.com'><br>
+          <input type='submit' value='Inscrever-se' class="submit">
+        </form>
+      </fieldset>
+      
+      <a href="https://github.com/BrunoEnriqueB" target="_blank">@Bruno Enrique</a>
+    </footer>
+	</body>
+</html>
